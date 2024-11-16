@@ -38,6 +38,11 @@ public class ProcessSeeds {
                 seedNew = sourceDestinationMapping(seed, sourceDestinationMappings.getMappingRange().get(index));
                 if(seedNew != seed){
                     seed = seedNew;
+                    int size = sourceDestinationMappings.getMappingRange().size();
+                    List<SourceDestinationMapping> newSourceDestinationMapping = sourceDestinationMappings.getMappingRange().subList(index, size);
+                    ArrayList<SourceDestinationMapping> arrayListSdm = new ArrayList<>(newSourceDestinationMapping);
+                    SourceDestinationMappingType sdm = new SourceDestinationMappingType(sourceDestinationMappings.getMappingType(), arrayListSdm);
+                    sourceDestinationFilter(sdm, seed);
                     break;}
                 System.out.println("seed: " + seed + ", index: " + index);
                 System.out.println("sdm: " + sourceDestinationMappings.getMappingType() +" range:"+ sourceDestinationMappings.getMappingRange().get(index));
