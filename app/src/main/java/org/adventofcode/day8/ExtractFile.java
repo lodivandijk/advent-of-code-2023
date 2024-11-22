@@ -15,7 +15,7 @@ import java.util.Map;
 public class ExtractFile {
 
     public static String extractNavigationInstructions (){
-        String fileName = "/Users/lodivandijk/Library/Mobile Documents/com~apple~CloudDocs/Development/advent-of-code/app/src/main/resources/day8/Day8TestData.dat";
+        String fileName = "/Users/lodivandijk/Library/Mobile Documents/com~apple~CloudDocs/Development/advent-of-code/app/src/main/resources/day8/Day8Data.dat";
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
             String line = br.readLine();
@@ -28,7 +28,7 @@ public class ExtractFile {
     }
 
     public static Map<String, String[]> extractNavigationMap() {
-        String fileName = "/Users/lodivandijk/Library/Mobile Documents/com~apple~CloudDocs/Development/advent-of-code/app/src/main/resources/day8/Day8TestData.dat";
+        String fileName = "/Users/lodivandijk/Library/Mobile Documents/com~apple~CloudDocs/Development/advent-of-code/app/src/main/resources/day8/Day8Data.dat";
         Map<String, String[]> navigationInstructions = new HashMap<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));
@@ -38,7 +38,7 @@ public class ExtractFile {
             String line;
 
             while ((line = br.readLine()) != null) {
-                line = line.replaceAll("\\s+", " ").replaceAll("=", ",").replace("(", "").replace(")", "");
+                line = line.replaceAll("\\s+", " ").replaceAll("=", ",").replace("(", "").replace(")", "").replaceAll("\\s+", "");
                 String[] mapData = line.split(",");
                 navigationInstructions.put(mapData[0], Arrays.copyOfRange(mapData, 1, mapData.length));
             }

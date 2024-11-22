@@ -21,19 +21,11 @@ public class ProcessNavigation {
         String currentStep = "AAA";
         String[] currentValue;
         int stepCount = 0;
+        int index = 0;
 
-        Set<String> keys = navigationMaps.keySet();
+        while (!currentStep.equals("ZZZ") && index < navigationInstructions.length()) {
+            char currentDirection = navigationInstructions.charAt(index);
 
-        for (String key : keys) {
-            System.out.println(key);
-        }
-
-        currentValue = navigationMaps.get("AAA");
-        logger.info(currentValue.toString());
-
-        for(char currentDirection:navigationInstructions.toCharArray()){
-            if(currentStep == "ZZZ"){
-                break;}
             if(currentDirection == 'L'){
                 currentStep = navigationMaps.get(currentStep)[0];
                 stepCount++;
@@ -43,6 +35,7 @@ public class ProcessNavigation {
                 stepCount++;
             }
             logger.info("step: {}, currentStep: {}", stepCount, currentStep);
+            index++;
         }
 
 
