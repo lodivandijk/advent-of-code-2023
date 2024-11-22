@@ -5,8 +5,8 @@ public record SourceDestinationMapping(Long destinationRangeStart, Long sourceRa
     public String toString() {
         return "SourceDestinationMapping{" +
                 "destinationRangeStart=" + destinationRangeStart +
-                ", sourceRangeStart=" + sourceRangeStart +
-                ", rangeLength=" + rangeLength +
+                "sourceRangeStart=" + sourceRangeStart +
+                "rangeLength=" + rangeLength +
                 "}";
     }
 }

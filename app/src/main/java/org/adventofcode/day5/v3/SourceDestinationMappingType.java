@@ -31,9 +31,9 @@ public class SourceDestinationMappingType {
 
     @Override
     public String toString() {
-        return "SourceDestinationMappingType{" +
+        return "SourceDestinationMappingType{\n" +
                 "MappingType='" + MappingType + '\n' +
-                ", mappingRange=" + mappingRange +
+                "mappingRange=" + mappingRange +
                 "}\n";
     }
 }
