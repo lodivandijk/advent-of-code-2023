@@ -5,7 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import org.adventofcode.day8.ProcessNavigation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
