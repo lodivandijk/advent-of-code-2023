@@ -52,7 +52,14 @@ public class Main {
 
         }
         mc.forEach(p-> logger.info(p.toString()));
-
+        int maxX =
     }
 
+
+    private int maxX (ArrayList<MapCoordinate> mc){
+        for(int index = 0; index < mc.size(); index++){
+
+        }
+
+    }
 }
